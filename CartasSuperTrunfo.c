@@ -22,11 +22,18 @@ int main() {
   float area_KM=104.4;
   float area_KM2=219.9;
 
-  float PIB=3.577322;
-  float PIB2=4.78923;
+  float PIB=357.7322;
+  float PIB2=478.923;
 
   int pontos_turisticos=2;
   int pontos_turisticos2= 17;
+
+  float densidade_populacional =352.356*104.4;
+  float densidade_populacional2 =476.890*219.9;
+
+  float PIB_per_capita =357.7322/352.356;
+  float PIB_per_capita2  =478.923/476.890;
+
   //Exibição de dados das cartas
   
   //Dados da Carta A1
@@ -37,8 +44,11 @@ int main() {
   printf("Area: %.f\n",area_KM);
   printf("PIB: %f\n",PIB);
   printf("Quantidade de pontos turisticos: %d\n",pontos_turisticos);
+  printf("Densidade populacional: %.2f\n", densidade_populacional);
+  printf(" PIB per capita: %.2f\n",PIB_per_capita);
 
   //Dados da carta B1
+
  printf("\n");
   printf("Carta: %s\n",codigo_da_carta2);
   printf("Estado: %s\n",estado2);
@@ -47,6 +57,8 @@ int main() {
   printf("Area: %f\n",area_KM2);
   printf("PIB: %f\n",PIB2);
   printf("Quantidade de pontos turisticos: %d\n",pontos_turisticos2);
+  printf("Densidade populacional: %.2f\n", densidade_populacional2);
+  printf(" PIB per capita: %.2f\n",PIB_per_capita2);
 
 return 0;
 } 
