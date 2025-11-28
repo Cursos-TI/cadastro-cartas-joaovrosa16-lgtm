@@ -70,10 +70,10 @@ int main(){
   printf("Carta B1 Santos (SP) PIB: %f\n",PIB2);
 
 printf("\n");
-if(PIB>PIB2);
-printf("Campo Grande VENCEDOR");
-else
-printf("Santos VENCEDOR");
-
+if(PIB>PIB2){
+printf("Campo Grande VENCEDOR!!!");
+}else{
+printf("Santos VENCEDOR!!!");}
+return 0;
 
 }
