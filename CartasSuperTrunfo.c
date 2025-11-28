@@ -4,8 +4,8 @@
 // Tema 1 - Cadastro das cartas
 // Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
 
-int main() {
-  // Área para entrada de dados das cartas
+int main(){
+    // Área para entrada de dados das cartas
 
   char codigo_da_carta[3]="A1";
   char codigo_da_carta2[3]="B1";
@@ -65,13 +65,15 @@ int main() {
 
   //Comparação dos atributos das cartas
   printf("\n");
-  printf("Vencendor em população: %d\n",populaçao > populaçao2);
-  printf("vencedor em area KM: %d\n", area_KM > area_KM2);
-  printf("Vencedor em PIB: %d\n", PIB > PIB2);
-  printf("Vencedor em pontos turisticos: %d\n", pontos_turisticos > pontos_turisticos2);
-  printf("Vencedor em densidade populacional: %.d\n", densidade_populacional < densidade_populacional2);
-  printf("Vencedor em PIB per capita: %.d\n", PIB_per_capita > PIB_per_capita2);
-  printf("Maior super poder!!!: %d\n", super_poder > super_poder2);
+  printf("Comparando PIB\n");
+  printf("Carta A1 Campo Grande (RJ) PIB: %f\n",PIB);
+  printf("Carta B1 Santos (SP) PIB: %f\n",PIB2);
 
-return 0;
-} 
+printf("\n");
+if(PIB>PIB2);
+printf("Campo Grande VENCEDOR");
+else
+printf("Santos VENCEDOR");
+
+
+}
