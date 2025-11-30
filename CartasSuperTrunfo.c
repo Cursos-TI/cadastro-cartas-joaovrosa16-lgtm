@@ -65,15 +65,74 @@ int main(){
 
   //Comparação dos atributos das cartas
   printf("\n");
-  printf("Comparando PIB\n");
-  printf("Carta A1 Campo Grande (RJ) PIB: %f\n",PIB);
-  printf("Carta B1 Santos (SP) PIB: %f\n",PIB2);
 
-printf("\n");
-if(PIB>PIB2){
-printf("Campo Grande VENCEDOR!!!");
-}else{
-printf("Santos VENCEDOR!!!");}
-return 0;
+  int escolhadojogador;
+  printf("## Escolha um atributo ##\n");
+  printf("1. população\n");
+  printf("2. Area\n");
+  printf("3. PIB\n");
+  printf("4. Pontos turisticos\n");
+  printf("5. Densidade populacional\n");
+  printf("6. PIB per capita\n");
+  printf("7.Super  poder\n");
+  scanf("%d",&escolhadojogador);
+
+  switch(escolhadojogador)
+  {case 1: printf("jogador 1 escolheu População\n");
+    break;
+    case 2: printf("jogador 1 escolheu Area\n");
+    break;
+    case 3: printf("jogador 1 escolheu PIB\n");
+    break;
+    case 4: printf("jogador 1 escolheu Pontos turisticos\n");
+    break;
+    case 5: printf("jogador 1 escolheu Densidade populacional\n");
+    break;
+    case 6: printf("jogador 1 escolheu PIB  per capita\n");
+    break;
+    case 7: printf("jogador 1 escolheu SUPER PODER!\n");
+    break;
+    default:printf("Opção Invalida\n");
+  }
+  int escolhadojogador2;
+  printf("## Escolha o atributo do oponente ##\n");
+  printf("1. população\n");
+  printf("2. Area\n");
+  printf("3. PIB\n");
+  printf("4. Pontos turisticos\n");
+  printf("5. Densidade populacional\n");
+  printf("6. PIB per capita\n");
+  printf("7.Super  poder\n");
+  scanf("%d",&escolhadojogador2);
+
+switch(escolhadojogador2)
+  {case 1: printf("oponente escolheu População\n");
+    break;
+    case 2: printf("oponente escolheu Area\n");
+    break;
+    case 3: printf("oponente escolheu PIB\n");
+    break;
+    case 4: printf("oponente escolheu Pontos turisticos\n");
+    break;
+    case 5: printf("oponente escolheu Densidade populacional\n");
+    break;
+    case 6: printf("oponente escolheu PIB  per capita\n");
+    break;
+    case 7: printf("oponente escolheu SUPER PODER!\n");
+    break;
+    default: printf("Opção Invalida\n");
+  }
+if((populaçao > populaçao2) || (area_KM > area_KM2) ||  (PIB > PIB2) ||
+(pontos_turisticos > pontos_turisticos2) || (densidade_populacional < densidade_populacional2) ||
+(PIB_per_capita > PIB_per_capita2) || (super_poder > super_poder2)){
+  printf("campo Grande RJ Venceu!!!");
+}
+else if((populaçao < populaçao2) || (area_KM < area_KM2) ||  (PIB < PIB2) ||
+(pontos_turisticos < pontos_turisticos2) || (densidade_populacional > densidade_populacional2) ||
+(PIB_per_capita < PIB_per_capita2) || (super_poder < super_poder2)){
+  printf("Santos SP Venceu!!!");
+}
+  else{printf("## Empate ##");
+  }
 
 }
