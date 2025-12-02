@@ -64,7 +64,9 @@ int main(){
   printf("Super poder : %f\n", super_poder2);
 
   //Comparação dos atributos das cartas
-  printf("\n");
+
+  //Aqui o jogador escolhe o atributo que quer utilizar
+printf("\n");
 
   int escolhadojogador;
   printf("## Escolha um atributo ##\n");
@@ -77,25 +79,54 @@ int main(){
   printf("7.Super  poder\n");
   scanf("%d",&escolhadojogador);
 
+  //Area de comparação do primeiro atributo
+int resultado;
+
   switch(escolhadojogador)
-  {case 1: printf("jogador 1 escolheu População\n");
+  {case 1: printf("Você escolheu População\n");
+    resultado = populaçao > populaçao2? 1:0;
     break;
-    case 2: printf("jogador 1 escolheu Area\n");
+
+    case 2: printf("Você escolheu Area\n");
+    resultado = area_KM > area_KM2? 1:0;
     break;
-    case 3: printf("jogador 1 escolheu PIB\n");
+
+    case 3: printf("Você escolheu PIB\n");
+    resultado = PIB > PIB2? 1:0;
     break;
-    case 4: printf("jogador 1 escolheu Pontos turisticos\n");
+
+    case 4: printf("Você escolheu Pontos turisticos\n");
+    resultado = pontos_turisticos > pontos_turisticos2? 1:0;
     break;
-    case 5: printf("jogador 1 escolheu Densidade populacional\n");
+
+    case 5: printf("Você escolheu Densidade populacional\n");
+    resultado = densidade_populacional < densidade_populacional2? 1:0;
     break;
-    case 6: printf("jogador 1 escolheu PIB  per capita\n");
+
+    case 6: printf("Você escolheu PIB  per capita\n");
+    resultado = PIB_per_capita > PIB2? 1:0;
     break;
-    case 7: printf("jogador 1 escolheu SUPER PODER!\n");
+
+    case 7: printf("Você escolheu SUPER PODER!\n");
+    resultado = super_poder > super_poder2? 1:0;
     break;
+
     default:printf("Opção Invalida\n");
   }
-  int escolhadojogador2;
-  printf("## Escolha o atributo do oponente ##\n");
+//Resultado de comparação do primeiro atributo 
+if (resultado == 1){
+printf("Parabéns, você VENCEU o primeiro round\n");
+}else{
+printf("Infelizmente, você perdeu o primeiro round\n");
+}
+
+//Aqui o jogador escolhe o segundo atributo que quer utilizar
+// estrutura if para caso o usuario escolha o mesmo atributo que o anterior
+printf("\n");
+int resultado2;
+int escolhadojogador2;
+
+printf("## Escolha o segundo atributo ##\n");
   printf("1. população\n");
   printf("2. Area\n");
   printf("3. PIB\n");
@@ -104,35 +135,56 @@ int main(){
   printf("6. PIB per capita\n");
   printf("7.Super  poder\n");
   scanf("%d",&escolhadojogador2);
+  // estrutura if para caso o usuario escolha o mesmo atributo que o anterior
+  if (escolhadojogador == escolhadojogador2)
+  {printf("Você esolheu o mesmo atributo\n");
+  }else{printf("## Escolha o segundo atributo ##\n");  printf("1. população\n");
+  printf("2. Area\n");
+  printf("3. PIB\n");
+  printf("4. Pontos turisticos\n");
+  printf("5. Densidade populacional\n");
+  printf("6. PIB per capita\n");
+  printf("7.Super  poder\n");
+  scanf("%d",&escolhadojogador2);}
 
-switch(escolhadojogador2)
-  {case 1: printf("oponente escolheu População\n");
+  //Area de comparação do segundo atributo
+ switch(escolhadojogador2)
+  {case 1: printf("Você escolheu População\n");
+    resultado2 = populaçao > populaçao2? 1:0;
     break;
-    case 2: printf("oponente escolheu Area\n");
+
+    case 2: printf("Você escolheu Area\n");
+    resultado2 = area_KM > area_KM2? 1:0;
     break;
-    case 3: printf("oponente escolheu PIB\n");
+
+    case 3: printf("Você escolheu PIB\n");
+    resultado2 = PIB > PIB2? 1:0;
     break;
-    case 4: printf("oponente escolheu Pontos turisticos\n");
+
+    case 4: printf("Você escolheu Pontos turisticos\n");
+    resultado2 = pontos_turisticos > pontos_turisticos2? 1:0;
     break;
-    case 5: printf("oponente escolheu Densidade populacional\n");
+
+    case 5: printf("Você escolheu Densidade populacional\n");
+    resultado2 = densidade_populacional < densidade_populacional2? 1:0;
     break;
-    case 6: printf("oponente escolheu PIB  per capita\n");
+
+    case 6: printf("Você escolheu PIB  per capita\n");
+    resultado2 = PIB_per_capita > PIB2? 1:0;
     break;
-    case 7: printf("oponente escolheu SUPER PODER!\n");
+
+    case 7: printf("Você escolheu SUPER PODER!\n");
+    resultado2 = super_poder > super_poder2? 1:0;
     break;
-    default: printf("Opção Invalida\n");
+
+    default:printf("Opção Invalida\n");
   }
-if((populaçao > populaçao2) || (area_KM > area_KM2) ||  (PIB > PIB2) ||
-(pontos_turisticos > pontos_turisticos2) || (densidade_populacional < densidade_populacional2) ||
-(PIB_per_capita > PIB_per_capita2) || (super_poder > super_poder2)){
-  printf("campo Grande RJ Venceu!!!");
+  //Resultado de comparação do segundo atributo 
+if (resultado2 == 1){
+printf("Parabéns, você VENCEU o segundo round\n");
+}else{
+printf("Infelizmente, você perdeu o segundo round\n");
 }
-else if((populaçao < populaçao2) || (area_KM < area_KM2) ||  (PIB < PIB2) ||
-(pontos_turisticos < pontos_turisticos2) || (densidade_populacional > densidade_populacional2) ||
-(PIB_per_capita < PIB_per_capita2) || (super_poder < super_poder2)){
-  printf("Santos SP Venceu!!!");
-}
-  else{printf("## Empate ##");
-  }
+
 
 }
